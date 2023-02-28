@@ -8,6 +8,7 @@ import 'components/InterviewerListItem.scss'
 // avatar:url - url to image of interviewer
 
 export default function InterviewerListItem(props) {
+  
   let interviewerStyles = classNames("interviewers__item", {
     "interviewers__item--selected": props.selected,
   })

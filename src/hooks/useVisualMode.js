@@ -9,6 +9,7 @@ const useVisualMode = (initial) => {
 
   // transition to  new mode
   const transition = (newMode, replace = false) => {
+    
     setMode((prev) => newMode)
     
     setHistory((prev) => {
