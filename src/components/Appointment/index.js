@@ -47,7 +47,7 @@ export default function Appointment(props) {
   }
 
 
-  function delete() {
+  const remove = () => {
 
     if (mode === CONFIRM) {
 
@@ -65,6 +65,7 @@ export default function Appointment(props) {
     }
   }
 
+  
 
   return (
     <article className="appointment">
@@ -75,7 +76,7 @@ export default function Appointment(props) {
           student={props.interview.student}
           interviewer={props.interview.interviewer}
           onCancel={back}
-          onDelete={delete}
+          onDelete={remove}
           onEdit={edit}
         />
       )}
@@ -90,7 +91,7 @@ export default function Appointment(props) {
       {mode === CONFIRM &&
         <Confirm
           onCancel={back}
-          onConfirm={delete}
+          onConfirm={remove}
           message="Are you sure you would like to delete?"
         />}
       {mode === EDIT &&

@@ -3,7 +3,7 @@ import 'components/DayListItem.scss'
 import classNames from "classnames";
 
 const formatSpots = (spots) => {
-  console.log('spots',spots)
+  console.log('available spots',spots)
   if (!spots) {
     return `no spots remaining`;
   }
