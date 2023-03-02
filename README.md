@@ -4,13 +4,19 @@
 The Interview Scheduler is a Single Page Application (SPA) designed to streamline the tracking of student interviews. It has been created using the most current tools and techniques to ensure optimal user experience. The application uses both built-in and customized hooks in React, which allow users to add, edit, and delete appointments in real time. All data is securely stored in a PostgreSQL database by the API server, and communication between the client and server is conducted over HTTP using JSON format. To ensure the highest level of quality assurance, the project adheres to Test Driven Development (TDD) best practices. This includes both individual component testing and end-to-end testing.
 
 ## Project Features
-- Appointment days (Monday to Friday) are displayed and colour-coordinated depending on availability
-- A user can view each day as well as appointment information
-- A user can book interviews by typing in a student name and clicking on an interviewer from a list of interviewers
-- A user can change the details of an existing interview 
-- A user can cancel an existing interview, with a confirmation to prevent accidental cancellations
-- Days display current remaining spots
-
+- Interviews can be booked between Monday and Friday.
+- A user can switch between weekdays.
+- A user can book an interview in an empty appointment slot.
+- Interviews are booked by typing in a student name and clicking on an interviewer from a list of available interviewers.
+- A user can cancel an existing interview.
+- A user can edit the details of an existing interview.
+- The list of days informs the user how many slots are available for each day.
+- The expected day updates the number of spots available when an interview is booked or canceled.
+- A user is presented with a confirmation when they attempt to cancel an interview.
+- A user is shown an error if an interview cannot be saved or deleted.
+- A user is shown a status indicator while asynchronous operations are in progress.
+- When the user presses the close button of the error they are returned to the Form or Show view (skipping Status and Confirm).
+- The application makes API requests to load and persist data. We do not lose data after a browser refresh.
 
 ### Home Page
 !['Home-page'](https://github.com/ireckless03/Scheduler/blob/b558327abfaa2969c158a59ae47f43d1872fd21f/public/images/home-page.png)
