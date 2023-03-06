@@ -38,7 +38,6 @@ const useVisualMode = (initial) => {
       return newHistory;
     });
   }
-console.log('histroy',history)
 
   return { mode, transition, back }
 }

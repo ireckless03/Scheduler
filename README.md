@@ -73,3 +73,5 @@ __Back-End:__ Express, Node.js, PostgreSQL
 
 __Testing:__ Storybook, Webpack Dev Server, Jest, Testing Library and Cypress
 
+## Dependencies
+Axios, classNames, Normalize.css, React, Babel, Storybook, Jest, Prop-types, SASS, Cypress

@@ -11,6 +11,7 @@ export default function useApplicationData(props) {
     interviewers: {}
   });
 
+  //updates available spots for given day
   const spotUpdate = (weekday, day, variable, id, appointments) => {
     let spot = day.spots;
     if (weekday ===
@@ -32,6 +33,7 @@ export default function useApplicationData(props) {
 
   };
 
+  // updates the number of spots available all week
   const updateSpots = (weekday, days, variable, id, appointments) => {
     if (variable === "REMOVE_SPOT") {
       const updatedStateDayArray =
