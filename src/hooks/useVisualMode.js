@@ -10,15 +10,18 @@ const useVisualMode = (initial) => {
   // transition to  new mode
   const transition = (newMode, replace = false) => {
     
-    setMode((prev) => newMode)
-    
-    setHistory((prev) => {
-      let newHistory = [...history]
-      if (replace) {
-        newHistory.pop()
-      }
-      return [...newHistory, newMode]
-    })
+    setMode(newMode)
+    if (replace) {
+      setHistory((prev) => {
+        const newHistory = [...prev]
+        newHistory[prev.length - 1] = newMode
+        return newHistory
+      })
+    } else {
+      setHistory((prev) => {
+        return [...prev, newMode]
+      })
+    }
   }
 
 
@@ -29,12 +32,13 @@ const useVisualMode = (initial) => {
       let newHistory = [...prev];
       if (newHistory.length > 1) {
         newHistory.pop()
-        setMode((history) => newHistory[(newHistory.length - 1)]);
+        const lastMode = newHistory[newHistory.length-1]
+        setMode(lastMode)
       }
       return newHistory;
     });
   }
-
+console.log('histroy',history)
 
   return { mode, transition, back }
 }

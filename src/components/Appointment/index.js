@@ -32,7 +32,7 @@ export default function Appointment(props) {
     };
 
     transition(SAVING)
-
+    
     props.bookInterview(props.id, interview)
       .then(() => {
         transition(SHOW);
@@ -65,7 +65,7 @@ export default function Appointment(props) {
     }
   }
 
-  
+
 
   return (
     <article className="appointment" data-testid="appointment">
