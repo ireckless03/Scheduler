@@ -65,6 +65,12 @@ For full functionality both must run concurrently: the client and the API server
 - Navigate to the root directory and install dependencies with `npm install`
 - Once you have the database setup and the scheduler-api server running, run the following command from the root directory of the project `npm start`
 
+## Running Cypress Test Framework
+```
+npm run cypress
+
+```
+
 ## Project Stack
 
 __Front-End:__ React, Axios, JSX, HTML, CSS, JavaScript
